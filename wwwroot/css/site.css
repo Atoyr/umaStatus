@@ -49,7 +49,6 @@ a, .btn-link {
   top: 0.5rem;
 }
 table {
-  border: 1px solid #aaa;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 6px;
@@ -76,3 +75,70 @@ table tbody tr:last-child td {
   border-bottom: none;
 }
 
+.white {
+  border: 1px solid #f6f6f6;
+  color: #222222;
+}
+.white-accent {
+  border: 1px solid #f6f6f6;
+  color: #222222;
+  background-color: #f6f6f6;
+}
+
+.black {
+  border: 1px solid #222222;
+  color: #222222;
+}
+.black-accent {
+  border: 1px solid #222222;
+  color: #f6f6f6;
+  background-color: #222222;
+}
+
+.red {
+  border: 1px solid #ff2828;
+}
+.red-accent {
+  border: 1px solid #ff2828;
+  color: #f6f6f6;
+  background-color: #ff2828;
+}
+
+.blue {
+  border: 1px solid #2828ff;
+}
+.blue-accent {
+  border: 1px solid #2828ff;
+  color: #f6f6f6;
+  background-color: #2828ff;
+}
+
+.yellow {
+  border: 1px solid #ffff28;
+}
+.yellow-accent {
+  border: 1px solid #ffff28;
+  color: #222222;
+  background-color: #ffff28;
+}
+
+.grean {
+  border: 1px solid #ff00ff;
+}
+.grean-accent {
+  border: 1px solid #ff00ff;
+}
+
+.orange {
+  border: 1px solid #ff00ff;
+}
+.orange-accent {
+  border: 1px solid #ff00ff;
+}
+
+.pink {
+  border: 1px solid #ff00ff;
+}
+.pink-accent {
+  border: 1px solid #ff00ff;
+}
