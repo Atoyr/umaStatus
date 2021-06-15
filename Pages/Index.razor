@@ -1,0 +1,83 @@
+@page "/"
+
+<div>
+<h1>Hello, world!</h1>
+
+@foreach (var s in umas)
+{
+<table class="Frame" height="110px">
+  <tr>
+    <td rowspan="2">
+      <!--枠番-->
+    </td>
+    <td rowspan="2">
+      <!--イメージ-->
+    </td>
+    <td>
+      <!--距離適正-->
+      <!--芝適正-->
+      <!--やる気-->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <th scope="col">スピード</th>
+          <th scope="col">スタミナ</th>
+          <th scope="col">パワー</th>
+          <th scope="col">根性</th>
+          <th scope="col">賢さ</th>
+        </tr>
+        <tr>
+            <td>@s.Speed</td>
+            <td>@s.Stamina</td>
+            <td>@s.Power</td>
+            <td>@s.Guts</td>
+            <td>@s.Intelligence</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+</table>
+}
+
+<table>
+    <tr>
+      <td rowspan="2">
+        <!--枠番-->
+        <input type="number" @bind="no" />
+      </td>
+      <td rowspan="2">
+        <!--イメージ-->
+      </td>
+      <td>
+        <!--距離適正-->
+        <!--芝適正-->
+        <!--やる気-->
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <th scope="col">スピード</th>
+            <th scope="col">スタミナ</th>
+            <th scope="col">パワー</th>
+            <th scope="col">根性</th>
+            <th scope="col">賢さ</th>
+          </tr>
+          <tr>
+            <td><input type="number" @bind="speed" /></td>
+            <td><input type="number" @bind="stamina" /></td>
+            <td><input type="number" @bind="power" /></td>
+            <td><input type="number" @bind="guts" /></td>
+            <td><input type="number" @bind="intelligence" /></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+</table>
+<button @onclick="UpdateState">追加</button>
+</div>
+
