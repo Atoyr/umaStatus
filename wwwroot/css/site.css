@@ -48,97 +48,106 @@ a, .btn-link {
   right: 0.75rem;
   top: 0.5rem;
 }
-table {
+
+table.frame {
   border-collapse: separate;
+  border-style: solid;
+  border-width: 2px;
   border-spacing: 0;
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
+  margin: 2px;
 }
-table thead th,
-table tbody th,
-table tbody td {
-  padding: .6em 3em;
-  border-bottom: 1px solid #aaa;
+
+
+td.left {
+  border-radius: 6px 0 0 6px;
 }
-table thead th {
-  background-color: #ddd;
+
+td.right {
+  border-radius: 0 6px 6px 0;
 }
-table tbody th {
-  background-color: #eee;
+
+td.top-left {
+  border-radius: 6px 0 0 0;
 }
-table thead th + th,
-table tbody td {
-  border-left: 1px solid #aaa;
+
+td.top-right {
+  border-radius: 0 6px; 0 0;
 }
-table tbody tr:last-child th,
-table tbody tr:last-child td {
-  border-bottom: none;
+
+td.bottom-left {
+  border-radius: 0 0 0 6px;
+}
+
+td.bottom-right {
+  border-radius: 0 0 6px 0;
 }
 
 .white {
-  border: 1px solid #f6f6f6;
+  border-color: #f6f6f6;
   color: #222222;
 }
 .white-accent {
-  border: 1px solid #f6f6f6;
+  border-color: #f6f6f6;
   color: #222222;
   background-color: #f6f6f6;
 }
 
 .black {
-  border: 1px solid #222222;
+  border-color: #222222;
   color: #222222;
 }
 .black-accent {
-  border: 1px solid #222222;
+  border-color: #222222;
   color: #f6f6f6;
   background-color: #222222;
 }
 
 .red {
-  border: 1px solid #ff2828;
+  border-color: #ff2828;
 }
 .red-accent {
-  border: 1px solid #ff2828;
+  border-color: #ff2828;
   color: #f6f6f6;
   background-color: #ff2828;
 }
 
 .blue {
-  border: 1px solid #2828ff;
+  border-color: #2828ff;
 }
 .blue-accent {
-  border: 1px solid #2828ff;
+  border-color: #2828ff;
   color: #f6f6f6;
   background-color: #2828ff;
 }
 
 .yellow {
-  border: 1px solid #ffff28;
+  border-color: #ffff28;
 }
 .yellow-accent {
-  border: 1px solid #ffff28;
+  border-color: #ffff28;
   color: #222222;
   background-color: #ffff28;
 }
 
 .grean {
-  border: 1px solid #ff00ff;
+  border-color: #ff00ff;
 }
 .grean-accent {
-  border: 1px solid #ff00ff;
+  border-color: #ff00ff;
 }
 
 .orange {
-  border: 1px solid #ff00ff;
+  border-color: #ff00ff;
 }
 .orange-accent {
-  border: 1px solid #ff00ff;
+  border-color: #ff00ff;
 }
 
 .pink {
-  border: 1px solid #ff00ff;
+  border-color: #ff00ff;
 }
 .pink-accent {
-  border: 1px solid #ff00ff;
+  border-color: #ff00ff;
 }

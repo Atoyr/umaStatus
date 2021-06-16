@@ -5,7 +5,6 @@ namespace umaStatus.Models
   public class Status
   {
     public string Name {set;get;}
-    public int No { set; get; }
     public int Speed {set;get;}
     public int Stamina {set;get;}
     public int Power {set;get;}

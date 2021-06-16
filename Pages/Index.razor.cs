@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.JSInterop;
 using umaStatus.Models;
+using umaStatus.Utilities;
 
 namespace umaStatus.Pages
 {
@@ -15,23 +16,29 @@ namespace umaStatus.Pages
     [Parameter]
     public List<Status> umas {set;get;} = new List<Status>();
 
+    protected string TableClassname =>
+      ClassBuilder.Default("frame")
+      .AddClass(color)
+      .Build();
+
     protected int no {set;get;}
     protected int speed {set;get;}
     protected int stamina {set;get;}
     protected int power {set;get;}
     protected int guts {set;get;}
     protected int intelligence {set;get;}
+    protected string color { set; get; }
 
     protected void UpdateState()
     {
       var s = new Status();
-      s.No = no;
       s.Speed = speed;
       s.Stamina = stamina;
       s.Power = power;
       s.Guts = guts;
       s.Intelligence = intelligence;
       umas.Add(s);
+
     }
   }
 }

@@ -1,5 +1,36 @@
-﻿<h3>Character</h3>
-
-@code {
-
-}
+﻿<table class="@TableClassname" height="100px" width="280px">
+  <tr>
+    <td class="@NoClassname" rowspan="2" width="16px">
+      <!--枠番-->
+      @No
+    </td>
+    <td rowspan="2">
+      <!--イメージ-->
+    </td>
+    <td class="top-right">
+      <!--距離適正-->
+      <!--芝適正-->
+      <!--やる気-->
+    </td>
+  </tr>
+  <tr>
+    <td class="bottom-right">
+      <table>
+        <tr>
+          <th scope="col">スピード</th>
+          <th scope="col">スタミナ</th>
+          <th scope="col">パワー</th>
+          <th scope="col">根性</th>
+          <th scope="col">賢さ</th>
+        </tr>
+        <tr>
+            <td>@Status.Speed</td>
+            <td>@Status.Stamina</td>
+            <td>@Status.Power</td>
+            <td>@Status.Guts</td>
+            <td>@Status.Intelligence</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+</table>
