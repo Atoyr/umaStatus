@@ -138,22 +138,28 @@ img.StatusIcon {
 }
 
 .grean {
-  border-color: #ff00ff;
+  border-color: #28ff28;
 }
 .grean-accent {
-  border-color: #ff00ff;
+  border-color: #28ff28;
+  color: #222222;
+  background-color: #28ff28;
 }
 
 .orange {
-  border-color: #ff00ff;
+  border-color: #ff9328;
 }
 .orange-accent {
-  border-color: #ff00ff;
+  border-color: #ff9328;
+  color: #222222;
+  background-color: #ff9238;
 }
 
 .pink {
-  border-color: #ff00ff;
+  border-color: #ff28ff;
 }
 .pink-accent {
-  border-color: #ff00ff;
+  border-color: #ff28ff;
+  color: #222222;
+  background-color: #ff28ff;
 }
