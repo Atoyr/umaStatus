@@ -21,6 +21,9 @@ namespace umaStatus.Pages
       .AddClass(color)
       .Build();
 
+
+    protected int GateCount { set; get; } = 9;
+
     protected int no {set;get;}
     protected int speed {set;get;}
     protected int stamina {set;get;}
@@ -28,6 +31,14 @@ namespace umaStatus.Pages
     protected int guts {set;get;}
     protected int intelligence {set;get;}
     protected string color { set; get; }
+
+    protected override void OnInitialized()
+    {
+      while (umas.Count() < 18)
+      {
+        umas.Add(new Status());
+      }
+    }
 
     protected void UpdateState()
     {

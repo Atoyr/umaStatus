@@ -84,6 +84,12 @@ td.bottom-right {
   border-radius: 0 0 6px 0;
 }
 
+img.StatusIcon {
+  border-radius: 25%;
+}
+
+
+
 .white {
   border-color: #f6f6f6;
   color: #222222;

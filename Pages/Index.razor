@@ -4,11 +4,13 @@
 <div>
 <h1>Hello, world!</h1>
 
+
+
 @foreach (var (index, status) in @umas.Select((status, i) => (i + 1, status)))
 {
   <umaStatus.Components.Character 
     Status=@status
-    Count=@umas.Count()
+    GateCount=@GateCount
     No=@index
   />
 }
@@ -32,11 +34,11 @@
       <td>
         <table>
           <tr>
-            <th scope="col"><img src="images/speed.png" /></th>
-            <th scope="col"><img src="images/stamina.png" /></th>
-            <th scope="col"><img src="images/power.png" /></th>
-            <th scope="col"><img src="images/guts.png" /></th>
-            <th scope="col"><img src="images/intelligence.png" /></th>
+            <th scope="col"><img class="StatusIcon" src="images/speed.webp" /></th>
+            <th scope="col"><img class="StatusIcon" src="images/stamina.webp" /></th>
+            <th scope="col"><img class="StatusIcon" src="images/power.webp" /></th>
+            <th scope="col"><img class="StatusIcon" src="images/guts.webp" /></th>
+            <th scope="col"><img class="StatusIcon" src="images/intelligence.webp" /></th>
           </tr>
           <tr>
             <td><input type="number" @bind="speed" /></td>

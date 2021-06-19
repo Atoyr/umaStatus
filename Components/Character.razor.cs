@@ -33,20 +33,20 @@ namespace umaStatus.Components
       }
     }
 
-    private int count;
+    private int gateCount;
     [Parameter]
-    public int Count 
+    public int GateCount 
     { 
       set
       {
-        count = value;
+        gateCount = value;
         setColor();
         StateHasChanged();
       }
 
       get 
       {
-        return count;
+        return gateCount;
       }
     }
 
@@ -67,14 +67,14 @@ namespace umaStatus.Components
     { 
       get
       {
-        if ( no <= 0 || 18 < no || count <= 0 || 18 < count)
+        if ( no <= 0 || 18 < no || gateCount <= 0 || 18 < gateCount)
         {
           return 0;
         }
 
-        if (count > 15)
+        if (gateCount > 15)
         {
-          switch(count % 16)
+          switch(gateCount % 16)
           {
             case 0:
               return (no % 2 > 0 ? no / 2 + 1 : no / 2);
@@ -87,13 +87,13 @@ namespace umaStatus.Components
               return 8;
           }
         }
-        if (17 - count > no) 
+        if (17 - gateCount > no) 
         {
           return no;
         }
         else
         {
-          var x = 16 - count;
+          var x = 16 - gateCount;
           var y = no - x;
           return x + (y % 2 > 0 ? y / 2 + 1 : y /2 );
         }
