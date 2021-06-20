@@ -6,7 +6,7 @@
 
 
 
-@foreach (var (index, status) in @umas.Select((status, i) => (i + 1, status)))
+@foreach (var (index, status) in @umas.Select((status, i) => (i + 1, status)).Take(GateCount))
 {
   <umaStatus.Components.Character 
     Status=@status

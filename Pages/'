@@ -1,0 +1,36 @@
+﻿<table class="@TableClassname" height="100px" width="280px">
+  <tr>
+    <td class="@NoClassname" rowspan="2" width="16px">
+      <!--枠番-->
+      @No
+    </td>
+    <td rowspan="2" width="90px" height="90px">
+      <!--イメージ-->
+    </td>
+    <td class="top-right">
+      <!--距離適正-->
+      <!--芝適正-->
+      <!--やる気-->
+    </td>
+  </tr>
+  <tr>
+    <td class="bottom-right">
+      <table>
+        <tr>
+          <th scope="col"><img src="images/speed.webp" width="20px" height="20px"/></th>
+          <th scope="col"><img src="images/stamina.webp" width="20px" height="20px"/></th>
+          <th scope="col"><img src="images/power.webp" width="20px" height="20px"/></th>
+          <th scope="col"><img src="images/guts.webp" width="20px" height="20px"/></th>
+          <th scope="col"><img src="images/intelligence.webp" width="20px" height="20px"/></th>
+        </tr>
+        <tr>
+            <td width="36px"><p >@Status.Speed</p></td>
+            <td width="36px"><p>@Status.Stamina</p></td>
+            <td width="36px"><p>@Status.Power</p></td>
+            <td width="36px"><p>@Status.Guts</p></td>
+            <td width="36px"><p>@Status.Intelligence</p></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+</table>

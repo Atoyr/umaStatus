@@ -59,6 +59,21 @@ table.frame {
   margin: 2px;
 }
 
+table.parameters {
+  border-collapse: separate;
+  border-style: solid;
+  border-width: 2px;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1px;
+}
+table.parameters th {
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-spacing: 0;
+}
+
 
 td.left {
   border-radius: 6px 0 0 6px;
@@ -137,10 +152,10 @@ img.StatusIcon {
   background-color: #ffff28;
 }
 
-.grean {
+.green {
   border-color: #28ff28;
 }
-.grean-accent {
+.green-accent {
   border-color: #28ff28;
   color: #222222;
   background-color: #28ff28;
