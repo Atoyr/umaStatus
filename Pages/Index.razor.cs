@@ -23,13 +23,16 @@ namespace umaStatus.Pages
 
 
     protected int GateCount { set; get; } = 9;
+    protected IEnumerable<string> GateNoList 
+    {
+      get
+      {
+        return Enumerable.Range(1, GateCount).Select(x => x.ToString());
+      }
+    }
 
-    protected int no {set;get;}
-    protected int speed {set;get;}
-    protected int stamina {set;get;}
-    protected int power {set;get;}
-    protected int guts {set;get;}
-    protected int intelligence {set;get;}
+
+    protected GateStatus gateStatus { set; get; }= new GateStatus();
     protected string color { set; get; }
 
     protected override void OnInitialized()
@@ -42,14 +45,17 @@ namespace umaStatus.Pages
 
     protected void UpdateState()
     {
-      var s = new Status();
-      s.Speed = speed;
-      s.Stamina = stamina;
-      s.Power = power;
-      s.Guts = guts;
-      s.Intelligence = intelligence;
-      umas.Add(s);
+      if ( string.IsNullOrEmpty(gateStatus.GateNo )) return;
+      Console.WriteLine(gateStatus.GateNo);
+      var s = umas[Int32.Parse(gateStatus.GateNo) - 1];
 
+      s.Speed = gateStatus.Speed;
+      s.Stamina = gateStatus.Stamina;
+      s.Power = gateStatus.Power;
+      s.Guts = gateStatus.Guts;
+      s.Intelligence = gateStatus.Intelligence;
+
+      gateStatus.Reset();
     }
   }
 }

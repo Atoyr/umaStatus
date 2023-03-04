@@ -1,56 +1,63 @@
 @page "/"
 @using umaStatus.Components
 
-<div>
-<h1>Hello, world!</h1>
+<div class="container">
+  <div class="target-view">
+    @foreach (var (index, status) in @umas.Select((status, i) => (i + 1, status)).Take(GateCount))
+    {
+    <umaStatus.Components.Character 
+     Status=@status
+     GateCount=@GateCount
+     No=@index
+     />
+    }
+  </div>
 
-
-
-@foreach (var (index, status) in @umas.Select((status, i) => (i + 1, status)).Take(GateCount))
-{
-  <umaStatus.Components.Character 
-    Status=@status
-    GateCount=@GateCount
-    No=@index
-  />
-}
-
-<table class="frame" height="200px" width="560px">
-    <tr>
-      <td rowspan="2">
-        <!--枠番-->
-        <input type="number" @bind="no" />
-      </td>
-      <td rowspan="2">
-        <!--イメージ-->
-      </td>
-      <td>
-        <!--距離適正-->
-        <!--芝適正-->
-        <!--やる気-->
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <table>
-          <tr>
-            <th scope="col"><img class="StatusIcon" src="images/speed.webp" /></th>
-            <th scope="col"><img class="StatusIcon" src="images/stamina.webp" /></th>
-            <th scope="col"><img class="StatusIcon" src="images/power.webp" /></th>
-            <th scope="col"><img class="StatusIcon" src="images/guts.webp" /></th>
-            <th scope="col"><img class="StatusIcon" src="images/intelligence.webp" /></th>
-          </tr>
-          <tr>
-            <td><input type="number" @bind="speed" /></td>
-            <td><input type="number" @bind="stamina" /></td>
-            <td><input type="number" @bind="power" /></td>
-            <td><input type="number" @bind="guts" /></td>
-            <td><input type="number" @bind="intelligence" /></td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-</table>
-<button @onclick="UpdateState">追加</button>
+  <div width="auto">
+    <EditForm Model="@gateStatus">
+    <table class="frame" height="200px" width="560px">
+      <tr>
+        <td rowspan="2">
+          <!--枠番-->
+          <InputSelect @bind-Value="gateStatus.GateNo">
+          <option value="">Select classification ...</option>
+          @foreach(var str in @GateNoList)
+          {
+            <option value="@str">@str</option>
+          }
+          </InputSelect>
+        </td>
+        <td rowspan="2">
+          <!--イメージ-->
+        </td>
+        <td>
+          <!--距離適正-->
+          <!--芝適正-->
+          <!--やる気-->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <th scope="col"><img class="StatusIcon" src="images/speed.webp" /></th>
+              <th scope="col"><img class="StatusIcon" src="images/stamina.webp" /></th>
+              <th scope="col"><img class="StatusIcon" src="images/power.webp" /></th>
+              <th scope="col"><img class="StatusIcon" src="images/guts.webp" /></th>
+              <th scope="col"><img class="StatusIcon" src="images/intelligence.webp" /></th>
+            </tr>
+            <tr>
+              <td><InputNumber @bind-Value="gateStatus.Speed" /></td>
+              <td><InputNumber @bind-Value="gateStatus.Stamina" /></td>
+              <td><InputNumber @bind-Value="gateStatus.Power" /></td>
+              <td><InputNumber @bind-Value="gateStatus.Guts" /></td>
+              <td><InputNumber @bind-Value="gateStatus.Intelligence" /></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    </EditForm>
+    <button @onclick="UpdateState">追加</button>
+  </div>
 </div>
-
